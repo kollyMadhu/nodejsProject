@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+     <script src="lib/traceur.js"></script>
+    <script src="lib/BrowserSystem.js"></script>
+    <script src="lib/bootstrap.js"></script>
+    <script type="module">
+        import { Hero } from  "mods/hero.js";
+        
+    var comicHero = new Hero("hulk");
+    console.log(comicHero.fn);
+console.log(comicHero.sayname());
+console.log(comicHero.secret);
+comicHero.secret="take break";
+console.log(comicHero.secret);
+    console.log(Hero.defaultcity());
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

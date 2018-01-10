@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title><script>
+    class Hero{
+        constructor(fn){
+            this.fn = fn;
+            this._secret ="my secret";
+        }
+        static defaultcity(){
+            return "bangalore";
+        }
+        sayname(){
+            return "my name is "+this.fn
+        }
+        setSecret(newsecret){
+ this_secret = newsecret;
+        }
+        getSecret(newsecret){
+            return this._secret;
+        }
+    };
+    var comicHero = new Hero("hulk");
+    console.log(comicHero.fn);
+console.log(comicHero.sayname());
+console.log(comicHero.secret);
+comicHero.secret="take break";
+console.log(comicHero.secret);
+    console.log(Hero.defaultcity());
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

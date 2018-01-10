@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+ var Hero=function(fn,ln){
+    this.firstname= fn;
+    this.lastname= ln;
+ };
+Hero.prototype.fullname=function(){
+    return this.firstname+" "+this.lastname;
+}
+var comicHero= new Hero("peter","parker");
+console.warn(comicHero.firstname,comicHero.lastname);
+console.error(comicHero.fullname());
+
+var filmiHer = new Hero("rajni","kany");
+console.warn(filmiHer.firstname,filmiHer.lastname);
+console.error(filmiHer.fullname());
+console.log("+++++++++++++++++++++++++++++++++++++++");
+console.log(comicHero.fullname===filmiHer.fullname);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
