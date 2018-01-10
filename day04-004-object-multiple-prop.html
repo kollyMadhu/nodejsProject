@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+     var hero = Object.create(null);
+        Object.defineProperty(hero, "title", {
+            value : "Dead Pool",
+            writable : true,
+            enumerable :true,
+            configurable : true
+        });
+       /* Object.defineProperty(hero, "title", {
+            value : "Hulk",
+            enumerable : true
+        });*/
+       //  console.log(obj3.title);// Dead pool
+        // obj3.title = "Joker";
+        // console.log(obj3.title);// Dead pool
+        
+        Object.defineProperties(hero,{
+            city : {
+                value : "New York",
+                enumerable : true
+            },
+            power : {
+                value : 7,
+                writable : true
+            }
+        });
+
+Object.defineProperty(hero,"modifypower",{
+    get: function(){
+        return this.power;
+    },
+    set : function(val){
+        this.power=val;
+
+    }
+});
+
+        console.log(hero.modifypower);
+        hero.modifypower=8;
+        console.log(hero.modifypower);
+       // console.log(hero.city, hero.power, hero.title);
+       for(var prop in hero){
+             console.log(prop);
+        };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+

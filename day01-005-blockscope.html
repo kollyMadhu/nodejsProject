@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        /* var user= "Madhuri";
+    console.log(user);
+console.log(window.user);
+
+function sayname(){
+    return this.user;
+};
+    window.sayname();*/
+    var fname= "Madhu";
+    var lname= "kumari";
+        var batman = {
+            fname: "bruce",
+            lname: "wayname",
+            fullname: function () {
+                return this.fname + " " + this.lname;
+            }
+
+        };
+        var superman = {
+            fname: "clerk",
+            lname: "kent"
+        };
+
+        var ironman = {
+            fname: "tony",
+            lname: "stark"
+        };
+
+        var spiderman = {
+            fname: "peter",
+            lname: "parker"        
+};
+console.log(batman.fullname.call(this));
+console.log(batman.fullname());
+//console.log(batman.fullname.call(superman));
+//console.log(batman.fullname.apply(superman));
+//console.log(batman.fullname.call(superman,"hello"));
+//console.log(batman.fullname.apply(superman,["hello"]));
+//console.log(batman.fullname.bind(superman)("hello there"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

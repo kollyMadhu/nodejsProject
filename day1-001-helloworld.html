@@ -1,0 +1,38 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function init(){
+            // alert(document.body.childNodes[2].tagName);
+            // alert(document.body.childNodes[3].tagName);
+            /*
+            document.body.childNodes[3].addEventListener("click", function(){
+                alert("you clicked me")
+            })
+            document.getElementsByTagName().addEventListener("click", function(){
+                alert("you clicked me")
+            })
+            */
+            
+           //  alert(document.getElementsByTagName("button")[1].innerHTML)
+            var elms = document.getElementsByTagName("button");
+            // alert(elms.length);
+            for(var i = 0; i < elms.length; i++){
+                elms[i].addEventListener("click", function(event){
+                    // alert("you clicked a button");
+                    // alert(event.target.innerHTML);
+                    alert(event.target.getAttribute("data-sku"))
+                })
+            }
+        };
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button data-sku="1001" >Click Me</button>
+    <button data-sku="1002" >Second Button</button>
+    <button data-sku="1003" >third button</button>
+</body>
+</html>

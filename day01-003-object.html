@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <script>
+         /* { title : "Superman", city : "Metropolis" ,power:8},
+        { title : "Batman", city : "Gotham" ,power:5},
+        { title : "Spiderman", city : "New York" , power:10},
+        { title : "Ironman", city : "New York",power:6}*/
+var obj1 = new Object();
+var obj2={};
+var obj3=Object.create(null);//right way
+//console.log(typeof obj1,typeof obj2,typeof obj3);
+//value
+//writable:can change
+//enumerable: descover property of object
+//configurable: override
+//get
+//set
+Object.defineProperty(obj3,"title",{
+    value: "Dead pool",
+    writable : true,
+    enumerable: true,
+    configurable : true
+});
+
+Object.defineProperty(obj3,"name",{
+    value: "hulk",
+    //writable : true,
+    //enumerable: true
+});
+//console.log(obj3.title);
+//obj3.title="joker";
+//console.log(obj3.title);
+for(var prop in obj3){
+console.log(obj3[prop]);
+console.log(prop);
+
+
+}
+
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
