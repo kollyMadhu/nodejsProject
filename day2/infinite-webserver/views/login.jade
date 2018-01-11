@@ -1,0 +1,12 @@
+extends template
+
+block body
+   h1 Authorisation Example
+   form(action="post")
+    label(for="email") Email :
+        input(type="email", name="email" required )
+    br
+    label(for="password") Password :
+        input(type="password", name="password" required )
+    br
+    input(type="submit" value="Login")

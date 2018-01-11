@@ -1,0 +1,15 @@
+extends template
+h1 #{error};
+block body
+   h1 Registeration Page
+   form(method="post")
+    label(for="name") User Name :
+        input(type="text", name="name" required )
+    br
+    label(for="email") Email :
+        input(type="email", name="email" required )
+    br
+    label(for="password") Password :
+        input(type="password", name="password" required )
+    br
+    input(type="submit" value="Login")

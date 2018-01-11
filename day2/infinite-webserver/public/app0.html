@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Application</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("button").on("click", function(){
+               // alert("jquery is now loaded")
+               // $(".box").load("/data");
+               $.ajax({
+                   url : "/data",
+                   dataType : "json"
+               }).done(function(result){
+                    console.log(result);
+                    $(".box").html(result)
+               })
+            })
+        });
+    </script>
+    <style>
+        .box{
+            width: 500px;
+            height: 250px;
+            border: 1px solid gray;
+            margin: auto;
+            background-color: silver;
+        }
+        button{
+            display: block;
+            width: 500px;
+            margin: 10px auto;
+        }
+        h1{
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to your app</h1>
+    <div class="box"></div>
+    <button>Load Data</button>
+</body>
+</html>

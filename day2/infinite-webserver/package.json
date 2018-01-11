@@ -1,0 +1,19 @@
+{
+  "name": "infinite",
+  "version": "1.0.0",
+  "description": "my first web server in Infinite",
+  "main": "step1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "infinite",
+    "bangalore",
+    "Madhuri"
+  ],
+  "author": "Madhuri",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
